@@ -2,7 +2,7 @@
   "name": "backend-setup-ep7",
   "version": "1.0.0",
   "description": "A backend at chai aur code",
-  "type": "commonjs",
+  "type": "module",
   "keywords": [
     "javascript",
     "backend"
@@ -11,10 +11,15 @@
   "author": "uday",
   "main": "index.js",
   "scripts": {
-    "Dev": "nodemon src/index.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
   "devDependencies": {
     "nodemon": "^3.1.11",
     "prettier": "^3.8.1"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.2.1"
   }
 }
